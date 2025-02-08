@@ -17,7 +17,7 @@ describe("POST/sum", () => {
 
     const res = await request(app).post("/sum").send({
 
-      a: 2,
+      a: 1,
       b: 2,
     });
 
