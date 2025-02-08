@@ -21,6 +21,6 @@ jobs:
         working-directory: 4.express-vitest-prisma-4
         run: npm install && npx prisma generate
 
-      - name: Run tests
-        working-directory: 4.express-vitest-prisma
-        run: npm  run test
+      - name: Run specific Vitest file
+        working-directory: 4.express-vitest-prisma-4
+        run: npm run test
