@@ -16,9 +16,11 @@ describe("POST/sum", () => {
     vi.spyOn(prismaClient.sum, "create");
 
     const res = await request(app).post("/sum").send({
+
       a: 1,
       b: 2,
     });
+    
     expect(prismaClient.sum.create).toHaveBeenCalledWith({
       data: {
         a: 1,
