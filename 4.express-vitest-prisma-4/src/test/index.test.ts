@@ -9,14 +9,14 @@ describe("POST/sum", () => {
   it("should return the sum of two numbers", async () => {
     prismaClient.sum.create.mockResolvedValue({
       id: 1,
-      a: 2,
+      a: 1,
       b: 2,
       result: 3,
     });
     vi.spyOn(prismaClient.sum, "create");
 
     const res = await request(app).post("/sum").send({
-      a: 1,
+      a: 2,
       b: 2,
     });
     expect(prismaClient.sum.create).toHaveBeenCalledWith({
