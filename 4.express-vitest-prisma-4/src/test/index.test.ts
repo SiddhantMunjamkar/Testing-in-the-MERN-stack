@@ -9,7 +9,7 @@ describe("POST/sum", () => {
   it("should return the sum of two numbers", async () => {
     prismaClient.sum.create.mockResolvedValue({
       id: 1,
-      a: 1,
+      a: 2,
       b: 2,
       result: 3,
     });
